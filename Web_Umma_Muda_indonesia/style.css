@@ -1,0 +1,41 @@
+/* style.css */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cc0096; /* Primary 600 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5c0948; /* Primary 800 */
+}
+
+/* Base resets & smooth scrolling fallback */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom CSS for Gallery Aspect Ratio if not using Tailwind Aspect Ratio Plugin */
+.aspect-w-4 {
+    position: relative;
+    padding-bottom: 75%; /* 4:3 Aspect Ratio */
+}
+
+.aspect-w-4 > img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
