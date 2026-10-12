@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umma Muda Indonesia | Natural Aceh Corp</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fdf2f9',
+                            100: '#fce4f4',
+                            600: '#cc0096',
+                            800: '#5c0948',
+                            900: '#4b0138',
+                        },
+                        accent: {
+                            400: '#ff33cc',
+                            500: '#fc00b9',
+                            600: '#cc0096',
+                        },
+                        offwhite: '#f9fafb',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-offwhite text-gray-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#">
+                        <img src="logo_umma_muda_indonesia.png" alt="Logo Umma Muda Indonesia" class="h-16 w-auto object-contain transform scale-[1.5] md:scale-[2] origin-left">
+                    </a>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-600 hover:text-primary-800 font-medium transition py-2" data-i18n="nav_beranda">Beranda</a>
+                    <a href="#program" class="text-gray-600 hover:text-primary-800 font-medium transition py-2" data-i18n="nav_program">Program Kami</a>
+                    <a href="#wilayah" class="text-gray-600 hover:text-primary-800 font-medium transition py-2" data-i18n="nav_wilayah">Wilayah Fokus</a>
+                    <a href="#galeri" class="text-gray-600 hover:text-primary-800 font-medium transition py-2" data-i18n="nav_galeri">Galeri</a>
+                    <a href="#kontak" class="text-gray-600 hover:text-primary-800 font-medium transition py-2" data-i18n="nav_kontak">Kontak</a>
+                    <button class="lang-toggle-btn text-sm font-bold text-gray-700 hover:text-primary-800 focus:outline-none hover:scale-105 transition ml-4 border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center bg-white shadow-sm" title="Translate to English">ID</button>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-800 focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 sm:px-6">
+                <div class="flex justify-end px-3 py-2">
+                    <button class="lang-toggle-btn text-sm font-bold text-gray-700 hover:text-primary-800 focus:outline-none hover:scale-105 transition border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center bg-white shadow-sm" title="Translate to English">ID</button>
+                </div>
+                <a href="#beranda" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-800 hover:bg-primary-50 rounded-md" data-i18n="nav_beranda">Beranda</a>
+                <a href="#program" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-800 hover:bg-primary-50 rounded-md" data-i18n="nav_program">Program Kami</a>
+                <a href="#wilayah" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-800 hover:bg-primary-50 rounded-md" data-i18n="nav_wilayah">Wilayah Fokus</a>
+                <a href="#galeri" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-800 hover:bg-primary-50 rounded-md" data-i18n="nav_galeri">Galeri</a>
+                <a href="#kontak" class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-800 hover:bg-primary-50 rounded-md" data-i18n="nav_kontak">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section id="beranda" class="relative bg-primary-900 text-white overflow-hidden py-20 lg:py-32">
+            <!-- Background pattern/image overlay -->
+            <div class="absolute inset-0 opacity-10">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Nature Background" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
+                <div class="w-full">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary-800 border border-primary-700 text-primary-100 text-xs font-semibold tracking-wide uppercase mb-6 shadow-sm" data-i18n="hero_badge">
+                        Umma Muda Indonesia • Natural Aceh Corp
+                    </span>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        <span data-i18n="hero_title1">Cerita Dari Papua:</span> <br>
+                        <span class="text-accent-400" data-i18n="hero_title2">Langkah kecil untuk hidup yang lebih layak</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-primary-100 mb-10 max-w-2xl mx-auto font-light" data-i18n="hero_desc">
+                        Berkomitmen menghadirkan akses dasar air bersih, sanitasi yang layak, intervensi gizi terpadu, dan perlindungan inklusif bagi saudara kita di wilayah 3T.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#galeri" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-full font-semibold text-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center" data-i18n="hero_btn1">
+                            Lihat Dokumentasi
+                        </a>
+                        <a href="#program" class="bg-transparent border border-white hover:bg-white hover:text-primary-900 text-white px-8 py-3.5 rounded-full font-semibold text-lg transition shadow text-center" data-i18n="hero_btn2">
+                            Lihat Program
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 Pillars Section -->
+        <section id="program" class="py-20 bg-offwhite">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary-900 mb-4" data-i18n="pillar_title">4 Pilar Program Utama</h2>
+                    <div class="w-24 h-1 bg-accent-500 mx-auto rounded"></div>
+                    <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg" data-i18n="pillar_desc">Inisiatif kami berfokus pada pendekatan holistik untuk menyelesaikan akar permasalahan di daerah sasaran melalui aksi nyata.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Pillar 1 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                        <div class="w-16 h-16 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-hand-holding-water"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-serif" data-i18n="pillar1_title">Air Bersih</h3>
+                        <p class="text-gray-600 leading-relaxed" data-i18n="pillar1_desc">
+                            Membangun instalasi air bersih dan menerapkan teknologi filtrasi sederhana berbasis masyarakat untuk memastikan akses air minum yang aman dan berkelanjutan.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                        <div class="w-16 h-16 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-restroom"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-serif" data-i18n="pillar2_title">Sanitasi Kemanusiaan</h3>
+                        <p class="text-gray-600 leading-relaxed" data-i18n="pillar2_desc">
+                            Pengadaan fasilitas MCK yang layak serta edukasi masif terkait Perilaku Hidup Bersih dan Sehat (PHBS) untuk menekan angka penyakit menular.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                        <div class="w-16 h-16 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-serif" data-i18n="pillar3_title">Gizi & Tumbuh Kembang</h3>
+                        <p class="text-gray-600 leading-relaxed" data-i18n="pillar3_desc">
+                            Pemberian intervensi gizi terpadu, pemantauan kesehatan ibu dan anak, serta program konkret pencegahan stunting secara komprehensif.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                        <div class="w-16 h-16 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-wheelchair"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-serif" data-i18n="pillar4_title">Inklusi Disabilitas</h3>
+                        <p class="text-gray-600 leading-relaxed" data-i18n="pillar4_desc">
+                            Mendorong pemberdayaan ekonomi, penyediaan alat bantu aksesibilitas, serta advokasi hak-hak dasar bagi penyandang disabilitas di daerah terpencil.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Focus Areas Section -->
+        <section id="wilayah" class="py-20 bg-primary-900 text-white relative">
+            <!-- Background detail -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="h-full w-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4" data-i18n="focus_title">Wilayah Intervensi Fokus</h2>
+                    <div class="w-24 h-1 bg-accent-500 mx-auto rounded"></div>
+                    <p class="mt-6 text-primary-100 max-w-2xl mx-auto text-lg" data-i18n="focus_desc">Mendedikasikan sumber daya pada titik-titik krusial di Indonesia Timur yang sangat membutuhkan akselerasi pembangunan dasar.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Area 1 -->
+                    <div class="region-card bg-primary-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-primary-700 cursor-pointer transform hover:-translate-y-1" data-region="papua">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Raja_Ampat%2C_Mutiara_Indah_di_Timur_Indonesia.jpg/800px-Raja_Ampat%2C_Mutiara_Indah_di_Timur_Indonesia.jpg" alt="Papua" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition duration-300 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary-900 to-transparent"></div>
+                            <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-sm p-2 rounded-full opacity-80 hover:opacity-100 transition">
+                                <i class="fas fa-map-marked-alt text-white"></i>
+                            </div>
+                            <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white" data-i18n="focus1_title">Papua</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-primary-100 text-sm" data-i18n="focus1_desc">Titik mula pergerakan kami. Memfokuskan pada pembangunan sanitasi perintis dan penyediaan akses air di wilayah pedalaman.</p>
+                            <p class="mt-4 text-accent-400 text-xs font-semibold uppercase tracking-wider flex items-center"><i class="fas fa-search-location mr-1"></i> Klik untuk lihat peta</p>
+                        </div>
+                    </div>
+
+                    <!-- Area 2 -->
+                    <div class="region-card bg-primary-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-primary-700 cursor-pointer transform hover:-translate-y-1" data-region="ntb">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mount_Rinjani_from_Sembalun_Lawang.jpg/800px-Mount_Rinjani_from_Sembalun_Lawang.jpg" alt="Nusa Tenggara Barat" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition duration-300 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary-900 to-transparent"></div>
+                            <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-sm p-2 rounded-full opacity-80 hover:opacity-100 transition">
+                                <i class="fas fa-map-marked-alt text-white"></i>
+                            </div>
+                            <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white" data-i18n="focus2_title">Nusa Tenggara Barat (NTB)</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-primary-100 text-sm" data-i18n="focus2_desc">Intervensi difokuskan pada penanganan gizi spesifik, penyediaan air bersih di daerah krisis air, dan penguatan kelompok rentan.</p>
+                            <p class="mt-4 text-accent-400 text-xs font-semibold uppercase tracking-wider flex items-center"><i class="fas fa-search-location mr-1"></i> Klik untuk lihat peta</p>
+                        </div>
+                    </div>
+
+                    <!-- Area 3 -->
+                    <div class="region-card bg-primary-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-primary-700 cursor-pointer transform hover:-translate-y-1" data-region="ntt">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Padar_Island_in_Komodo_National_Park.jpg/800px-Padar_Island_in_Komodo_National_Park.jpg" alt="Nusa Tenggara Timur" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition duration-300 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary-900 to-transparent"></div>
+                            <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-sm p-2 rounded-full opacity-80 hover:opacity-100 transition">
+                                <i class="fas fa-map-marked-alt text-white"></i>
+                            </div>
+                            <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white" data-i18n="focus3_title">Nusa Tenggara Timur (NTT)</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-primary-100 text-sm" data-i18n="focus3_desc">Mengatasi tingginya angka stunting melalui kolaborasi lintas sektor serta pemenuhan infrastruktur sanitasi komunal yang adaptif.</p>
+                            <p class="mt-4 text-accent-400 text-xs font-semibold uppercase tracking-wider flex items-center"><i class="fas fa-search-location mr-1"></i> Klik untuk lihat peta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Modal Overlay -->
+        <div id="map-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm transition-opacity">
+            <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl overflow-hidden flex flex-col relative transform scale-95 transition-transform duration-300" id="map-modal-content">
+                <!-- Header -->
+                <div class="flex justify-between items-center p-4 border-b border-gray-100 bg-gray-50">
+                    <h3 class="text-xl font-bold text-primary-900 font-serif" id="map-modal-title">Peta Lokasi</h3>
+                    <button id="close-map-modal" class="text-gray-400 hover:text-red-500 transition focus:outline-none p-2 rounded-full hover:bg-gray-200">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <!-- Map Container -->
+                <div class="w-full h-[500px] relative bg-gray-100">
+                    <div id="modal-map" class="absolute inset-0 z-0"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <section id="galeri" class="py-20 bg-offwhite">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div class="mb-6 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary-900 mb-4" data-i18n="gallery_title">Galeri Kegiatan</h2>
+                        <div class="w-24 h-1 bg-accent-500 rounded"></div>
+                        <p class="mt-4 text-gray-600 max-w-xl" data-i18n="gallery_desc">Rekam jejak aksi nyata kami merajut asa dan membawa perubahan bagi masyarakat di ujung timur Indonesia.</p>
+                    </div>
+                    <div>
+                        <a href="#" class="text-primary-600 font-semibold hover:text-primary-800 transition flex items-center">
+                            <span data-i18n="gallery_btn">Lihat Semua Album</span> <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Gallery Item 1 -->
+                    <div class="group relative rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-300">
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instalasi Air Papua" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                            <span class="text-accent-400 text-xs font-bold uppercase tracking-wider mb-1" data-i18n="gal1_tag">Papua</span>
+                            <h4 class="text-white text-lg font-bold" data-i18n="gal1_title">Pembangunan Fasilitas Air Bersih</h4>
+                            <p class="text-gray-300 text-sm mt-2" data-i18n="gal1_desc">Penyediaan akses air minum perdana untuk 50 kepala keluarga.</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="group relative rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-300">
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Edukasi Gizi NTB" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                            <span class="text-accent-400 text-xs font-bold uppercase tracking-wider mb-1" data-i18n="gal2_tag">NTB</span>
+                            <h4 class="text-white text-lg font-bold" data-i18n="gal2_title">Penyuluhan Gizi Ibu & Anak</h4>
+                            <p class="text-gray-300 text-sm mt-2" data-i18n="gal2_desc">Program intervensi stunting dan pembagian makanan tambahan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="group relative rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-300">
+                        <div class="aspect-w-4 aspect-h-3 bg-gray-200 h-64 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sosialisasi Sanitasi NTT" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                            <span class="text-accent-400 text-xs font-bold uppercase tracking-wider mb-1" data-i18n="gal3_tag">NTT</span>
+                            <h4 class="text-white text-lg font-bold" data-i18n="gal3_title">Pembangunan MCK Komunal</h4>
+                            <p class="text-gray-300 text-sm mt-2" data-i18n="gal3_desc">Membangun fasilitas sanitasi higienis dan ramah disabilitas.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 4 (Placeholder) -->
+                    <div class="group relative rounded-xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition duration-300 border border-dashed border-gray-300 flex items-center justify-center h-64">
+                        <div class="text-center p-6">
+                            <i class="fas fa-image text-gray-400 text-4xl mb-3"></i>
+                            <h4 class="text-gray-600 font-medium" data-i18n="gal_placeholder_title">Dokumentasi Mendatang</h4>
+                            <p class="text-gray-500 text-sm mt-1" data-i18n="gal_placeholder_desc">Ruang untuk aksi nyata selanjutnya</p>
+                        </div>
+                    </div>
+
+                     <!-- Gallery Item 5 (Placeholder) -->
+                     <div class="group relative rounded-xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition duration-300 border border-dashed border-gray-300 flex items-center justify-center h-64 hidden sm:flex">
+                        <div class="text-center p-6">
+                            <i class="fas fa-image text-gray-400 text-4xl mb-3"></i>
+                            <h4 class="text-gray-600 font-medium" data-i18n="gal_placeholder_title">Dokumentasi Mendatang</h4>
+                            <p class="text-gray-500 text-sm mt-1" data-i18n="gal_placeholder_desc">Ruang untuk aksi nyata selanjutnya</p>
+                        </div>
+                    </div>
+
+                     <!-- Gallery Item 6 (Placeholder) -->
+                     <div class="group relative rounded-xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition duration-300 border border-dashed border-gray-300 flex items-center justify-center h-64 hidden lg:flex">
+                        <div class="text-center p-6">
+                            <i class="fas fa-image text-gray-400 text-4xl mb-3"></i>
+                            <h4 class="text-gray-600 font-medium" data-i18n="gal_placeholder_title">Dokumentasi Mendatang</h4>
+                            <p class="text-gray-500 text-sm mt-1" data-i18n="gal_placeholder_desc">Ruang untuk aksi nyata selanjutnya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mitra & Pendukung Section -->
+        <section id="mitra" class="py-20 relative" style="background-color: #03254c;">
+            <div class="absolute inset-0 opacity-10">
+                <div class="h-full w-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4" data-i18n="mitra_title">Mitra & Pendukung</h2>
+                    <div class="w-24 h-1 bg-accent-500 mx-auto rounded"></div>
+                    <p class="mt-6 text-blue-100 max-w-2xl mx-auto text-lg" data-i18n="mitra_desc">Kolaborasi strategis demi mewujudkan pembangunan inklusif dan berkelanjutan di Indonesia.</p>
+                </div>
+
+                <div class="flex justify-center">
+                    <!-- Strategic Partners Only -->
+                    <div class="bg-white rounded-3xl p-10 md:p-12 shadow-2xl flex flex-col items-center justify-center text-center transform transition duration-300 hover:-translate-y-1 max-w-2xl w-full mx-4 border border-blue-50">
+                        <span class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8" data-i18n="mitra_strategic">Strategic / Program Partner</span>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-12 md:gap-16 w-full">
+                            <img src="logo_nathansfoundation.png" alt="Nathan's Foundation" class="h-16 md:h-20 w-auto object-contain hover:scale-105 transition duration-300">
+                            <img src="logo_kedutaan_australian.png" alt="Australian Government" class="h-16 md:h-20 w-auto object-contain hover:scale-105 transition duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontak" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-primary-900 rounded-3xl overflow-hidden shadow-2xl relative">
+                    <!-- Background overlay -->
+                    <div class="absolute inset-0 opacity-10">
+                        <div class="h-full w-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                    </div>
+                    
+                    <div class="p-10 md:p-16 text-white relative z-10 text-center">
+                        <h2 class="text-3xl font-serif font-bold mb-4" data-i18n="contact_title">Hubungi Kami</h2>
+                        <p class="text-primary-100 mb-10 text-lg font-light" data-i18n="contact_desc">Untuk informasi lebih lanjut mengenai dokumentasi dan kegiatan Umma Muda Indonesia, Anda dapat menghubungi kami melalui kontak di bawah ini.</p>
+                        
+                        <div class="flex flex-col md:flex-row justify-center items-start md:items-center gap-8 text-left">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-map-marker-alt text-accent-400 text-2xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium" data-i18n="contact_hq">Kantor Pusat</h4>
+                                    <p class="text-primary-200 mt-1" data-i18n="contact_hq_desc">Jl. Contoh Alamat No. 123<br>Banda Aceh, Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-envelope text-accent-400 text-2xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium" data-i18n="contact_email">Email Kami</h4>
+                                    <p class="text-primary-200 mt-1">hello@ummamuda.id</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-phone-alt text-accent-400 text-2xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium" data-i18n="contact_phone">Telepon / WhatsApp</h4>
+                                    <p class="text-primary-200 mt-1">+62 812 3456 7890</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Branding -->
+                <div class="md:col-span-1">
+                    <span class="font-bold text-2xl text-white font-serif tracking-wide block mb-2">Umma Muda Indonesia</span>
+                    <span class="text-sm text-gray-500 block mb-6" data-i18n="footer_initiative">Sebuah Inisiatif dari Natural Aceh Corp</span>
+                    <p class="text-sm text-gray-400 mb-6 max-w-xs" data-i18n="footer_desc">
+                        Hadir untuk menyambung asa dan memastikan hak-hak dasar masyarakat di pelosok negeri terpenuhi.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/ummamudaindonesia" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 hover:text-white transition text-gray-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 hover:text-white transition text-gray-400">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary-600 hover:text-white transition text-gray-400">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-semibold mb-6 uppercase text-sm tracking-wider" data-i18n="footer_links">Tautan Cepat</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#beranda" class="hover:text-accent-400 transition" data-i18n="nav_beranda">Beranda</a></li>
+                        <li><a href="#program" class="hover:text-accent-400 transition" data-i18n="nav_program">Program Kami</a></li>
+                        <li><a href="#wilayah" class="hover:text-accent-400 transition" data-i18n="nav_wilayah">Wilayah Intervensi</a></li>
+                        <li><a href="#galeri" class="hover:text-accent-400 transition" data-i18n="nav_galeri">Dokumentasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Copyright / Legal -->
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-semibold mb-6 uppercase text-sm tracking-wider" data-i18n="footer_legal">Legal & Informasi</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-accent-400 transition" data-i18n="footer_privacy">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="hover:text-accent-400 transition" data-i18n="footer_terms">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-accent-400 transition" data-i18n="footer_report">Laporan Transparansi</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p data-i18n="footer_copyright">&copy; 2024 Umma Muda Indonesia Hak Cipta Dilindungi.</p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="hover:text-white transition" data-i18n="footer_privacy">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white transition" data-i18n="footer_terms">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
