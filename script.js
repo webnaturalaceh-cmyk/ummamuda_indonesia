@@ -2,13 +2,19 @@
 
 const translations = {
     "nav_beranda": { id: "Beranda", en: "Home" },
-    "nav_program": { id: "Program Kami", en: "Our Programs" },
-    "nav_wilayah": { id: "Wilayah Fokus", en: "Focus Areas" },
+    "nav_program": { id: "Program", en: "Programs" },
+    "nav_wilayah": { id: "Fokus Wilayah", en: "Focus Areas" },
     "nav_galeri": { id: "Galeri", en: "Gallery" },
     "nav_kontak": { id: "Kontak", en: "Contact" },
-    "hero_badge": { id: "Umma Muda Indonesia • Natural Aceh Corp", en: "Umma Muda Indonesia • Natural Aceh Corp" },
-    "hero_title1": { id: "Cerita Dari Papua:", en: "Stories From Papua:" },
-    "hero_title2": { id: "Langkah kecil untuk hidup yang lebih layak", en: "Small steps for a better life" },
+    "nav_cta": { id: "Kontak Kami", en: "Contact Us" },
+    "stat_regions_label": { id: "Wilayah Fokus", en: "Focus Regions" },
+    "stat_pillars_label": { id: "Pilar Utama", en: "Main Pillars" },
+    "stat_beneficiaries_label": { id: "Keluarga Terbantu", en: "Families Impacted" },
+    "stat_partners_label": { id: "Mitra Global", en: "Global Partners" },
+    "modal_open_btn": { id: "Buka Peta Interaktif &rarr;", en: "Open Interactive Map &rarr;" },
+    "hero_badge": { id: "UMMA MUDA INDONESIA", en: "UMMA MUDA INDONESIA" },
+    "hero_title1": { id: "Aksi Dari Timur Indonesia", en: "Action From Eastern Indonesia" },
+    "hero_title2": { id: "Langkah kecil untuk hidup yang lebih layak", en: "Small steps towards a better life" },
     "hero_desc": { id: "Berkomitmen menghadirkan akses dasar air bersih, sanitasi yang layak, intervensi gizi terpadu, dan perlindungan inklusif bagi saudara kita di wilayah 3T.", en: "Committed to providing basic access to clean water, proper sanitation, integrated nutrition interventions, and inclusive protection for our brothers and sisters in 3T regions." },
     "hero_btn1": { id: "Lihat Dokumentasi", en: "View Documentation" },
     "hero_btn2": { id: "Lihat Program", en: "View Programs" },
@@ -30,25 +36,39 @@ const translations = {
     "focus2_desc": { id: "Intervensi difokuskan pada penanganan gizi spesifik, penyediaan air bersih di daerah krisis air, dan penguatan kelompok rentan.", en: "Interventions are focused on specific nutrition handling, clean water provision in water crisis areas, and strengthening vulnerable groups." },
     "focus3_title": { id: "Nusa Tenggara Timur (NTT)", en: "East Nusa Tenggara (NTT)" },
     "focus3_desc": { id: "Mengatasi tingginya angka stunting melalui kolaborasi lintas sektor serta pemenuhan infrastruktur sanitasi komunal yang adaptif.", en: "Overcoming the high rate of stunting through cross-sector collaboration and the fulfillment of adaptive communal sanitation infrastructure." },
+    "focus4_title": { id: "Sulawesi", en: "Sulawesi" },
+    "focus4_desc": { id: "Penguatan infrastruktur air bersih pesisir, penanganan stunting terpadu, dan pemberdayaan inklusif di wilayah Sulawesi Selatan dan sekitarnya.", en: "Strengthening coastal clean water infrastructure, integrated stunting intervention, and inclusive empowerment in South Sulawesi and surrounding areas." },
+    "focus5_title": { id: "Bali", en: "Bali" },
+    "focus5_desc": { id: "Fokus pada pemberdayaan disabilitas berbasis komunitas, sanitasi ramah lingkungan, serta dukungan ketahanan pangan bagi keluarga rentan.", en: "Focusing on community-based disability empowerment, eco-friendly sanitation, and food security support for vulnerable families." },
+    "focus6_title": { id: "Maluku", en: "Maluku" },
+    "focus6_desc": { id: "Menjangkau pulau-pulau terpencil dengan penyediaan sistem filtrasi air bersih, penanganan stunting kepulauan, dan aksesibilitas dasar.", en: "Reaching remote outer islands with clean water filtration systems, island stunting interventions, and basic accessibility." },
     "mitra_title": { id: "Mitra & Pendukung", en: "Partners & Supporters" },
     "mitra_desc": { id: "Kolaborasi strategis demi mewujudkan pembangunan inklusif dan berkelanjutan di Indonesia.", en: "Strategic collaboration to realize inclusive and sustainable development in Indonesia." },
     "mitra_hosted": { id: "Hosted by", en: "Hosted by" },
     "mitra_organized": { id: "Organized by", en: "Organized by" },
     "mitra_strategic": { id: "Strategic / Program Partner", en: "Strategic / Program Partner" },
     "gallery_title": { id: "Galeri Kegiatan", en: "Activity Gallery" },
-    "gallery_desc": { id: "Rekam jejak aksi nyata kami merajut asa dan membawa perubahan bagi masyarakat di ujung timur Indonesia.", en: "A track record of our real actions weaving hope and bringing change to communities in the eastern tip of Indonesia." },
-    "gallery_btn": { id: "Lihat Semua Album", en: "View All Albums" },
-    "gal1_tag": { id: "Papua", en: "Papua" },
-    "gal1_title": { id: "Pembangunan Fasilitas Air Bersih", en: "Clean Water Facility Construction" },
-    "gal1_desc": { id: "Penyediaan akses air minum perdana untuk 50 kepala keluarga.", en: "Provision of inaugural drinking water access for 50 families." },
-    "gal2_tag": { id: "NTB", en: "NTB" },
-    "gal2_title": { id: "Penyuluhan Gizi Ibu & Anak", en: "Maternal & Child Nutrition Counseling" },
-    "gal2_desc": { id: "Program intervensi stunting dan pembagian makanan tambahan.", en: "Stunting intervention program and distribution of supplementary food." },
-    "gal3_tag": { id: "NTT", en: "NTT" },
-    "gal3_title": { id: "Pembangunan MCK Komunal", en: "Communal Sanitation Construction" },
-    "gal3_desc": { id: "Membangun fasilitas sanitasi higienis dan ramah disabilitas.", en: "Building hygienic and disability-friendly sanitation facilities." },
-    "gal_placeholder_title": { id: "Dokumentasi Mendatang", en: "Upcoming Documentation" },
-    "gal_placeholder_desc": { id: "Ruang untuk aksi nyata selanjutnya", en: "Space for the next real actions" },
+    "gallery_desc": { id: "Dokumentasi aksi nyata dan rekam jejak terkini @ummamudaindonesia dalam merajut asa di pelosok Indonesia.", en: "Real action documentation and latest track record of @ummamudaindonesia in weaving hope across remote Indonesia." },
+    "gallery_btn": { id: "Kunjungi Instagram", en: "Visit Instagram" },
+    "gal_link_text": { id: "Lihat di Instagram", en: "View on Instagram" },
+    "gal1_tag": { id: "Kemandirian", en: "Independence" },
+    "gal1_title": { id: "Kemandirian Mulai Dari Rasa Percaya", en: "Independence Begins with Trust" },
+    "gal1_desc": { id: "Membangun kepercayaan keluarga dan masyarakat untuk mendukung kemandirian penyandang disabilitas.", en: "Building trust within families and communities to support the independence of people with disabilities." },
+    "gal2_tag": { id: "Otonomi", en: "Autonomy" },
+    "gal2_title": { id: "Berikan Pilihan, Bukan Perintah", en: "Offer Choices, Not Commands" },
+    "gal2_desc": { id: "Menghormati hak dan preferensi penyandang disabilitas dalam menentukan apa yang terbaik bagi mereka.", en: "Respecting the rights and preferences of people with disabilities in determining what is best for them." },
+    "gal3_tag": { id: "Aksesibilitas", en: "Accessibility" },
+    "gal3_title": { id: "Aktivitas Harian Adalah Hak Semua Orang", en: "Everyday Activities Are a Right for Everyone" },
+    "gal3_desc": { id: "Menghapus hambatan agar setiap individu bebas beraktivitas, berkumpul, dan menikmati ruang publik setara.", en: "Removing barriers so every individual can freely participate, gather, and enjoy equal public spaces." },
+    "gal4_tag": { id: "Pemberdayaan", en: "Empowerment" },
+    "gal4_title": { id: "Dukungan Tumbuh Tanpa Membatasi", en: "Support Growth Without Limiting Potential" },
+    "gal4_desc": { id: "Memberikan ruang eksplorasi dan kebebasan belajar bagi penyandang disabilitas untuk membangun rasa percaya diri.", en: "Giving space to explore and freedom to learn for people with disabilities to build self-confidence." },
+    "gal5_tag": { id: "Program ISF", en: "ISF Program" },
+    "gal5_title": { id: "Kick-Off Inclusive Seed Fund (ISF) 2026", en: "Inclusive Seed Fund (ISF) 2026 Kick-Off" },
+    "gal5_desc": { id: "Langkah awal kolaborasi bersama Nathan's Foundation dalam mendanai inisiatif dampak sosial yang inklusif.", en: "A new collaborative journey with Nathan's Foundation in funding inclusive social impact initiatives." },
+    "gal6_tag": { id: "Kolaborasi", en: "Collaboration" },
+    "gal6_title": { id: "Sesi Kolaborasi & Pembelajaran Digital", en: "Digital Learning & Collaboration Session" },
+    "gal6_desc": { id: "Terhubung dan bertukar ide dari mana saja untuk memperkuat dampak positif bagi masyarakat luas.", en: "Connecting and exchanging ideas from anywhere to strengthen positive impact for broader communities." },
     "contact_title": { id: "Hubungi Kami", en: "Contact Us" },
     "contact_desc": { id: "Untuk informasi lebih lanjut mengenai dokumentasi dan kegiatan Umma Muda Indonesia, Anda dapat menghubungi kami melalui kontak di bawah ini.", en: "For more information regarding Umma Muda Indonesia documentation and activities, you can contact us via the contacts below." },
     "contact_hq": { id: "Kantor Pusat", en: "Head Office" },
@@ -57,11 +77,14 @@ const translations = {
     "contact_phone": { id: "Telepon / WhatsApp", en: "Phone / WhatsApp" },
     "footer_initiative": { id: "Sebuah Inisiatif dari Natural Aceh Corp", en: "An Initiative of Natural Aceh Corp" },
     "footer_desc": { id: "Hadir untuk menyambung asa dan memastikan hak-hak dasar masyarakat di pelosok negeri terpenuhi.", en: "Present to weave hope and ensure the basic rights of communities in remote areas of the country are fulfilled." },
-    "footer_links": { id: "Tautan Cepat", en: "Quick Links" },
-    "footer_legal": { id: "Legal & Informasi", en: "Legal & Information" },
+    "footer_links": { id: "Navigasi", en: "Navigation" },
+    "footer_contact_title": { id: "Kontak & Sekretariat", en: "Contact & Secretariat" },
+    "footer_secretariat_label": { id: "Daftar Sekretariat", en: "Secretariats" },
+    "footer_item_loc": { id: "Pangkep (Sulsel), Maros (Sulsel), Gowa (Sulsel), Kupang (NTT), dan Teluk Bintuni (Papua Barat).", en: "Pangkep (South Sulawesi), Maros (South Sulawesi), Gowa (South Sulawesi), Kupang (East Nusa Tenggara), and Teluk Bintuni (West Papua)." },
+    "footer_item_email": { id: "ummamudaindo@gmail.com", en: "ummamudaindo@gmail.com" },
+    "footer_item_phone": { id: "+62 821-9895-0801", en: "+62 821-9895-0801" },
     "footer_privacy": { id: "Kebijakan Privasi", en: "Privacy Policy" },
     "footer_terms": { id: "Syarat & Ketentuan", en: "Terms & Conditions" },
-    "footer_report": { id: "Laporan Transparansi", en: "Transparency Report" },
     "footer_copyright": { id: "&copy; 2024 Umma Muda Indonesia Hak Cipta Dilindungi.", en: "&copy; 2024 Umma Muda Indonesia. All Rights Reserved." }
 };
 
@@ -141,13 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                window.scrollTo({
-                     top: offsetPosition,
-                     behavior: "smooth"
-                });
+                targetElement.scrollIntoView({ behavior: "smooth" });
             }
         });
     });
@@ -171,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: 6,
                 infoId: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Raja_Ampat%2C_Mutiara_Indah_di_Timur_Indonesia.jpg/800px-Raja_Ampat%2C_Mutiara_Indah_di_Timur_Indonesia.jpg" alt="Papua" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=400&q=80" alt="Papua" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi Papua</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -183,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `,
                 infoEn: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Raja_Ampat%2C_Mutiara_Indah_di_Timur_Indonesia.jpg/800px-Raja_Ampat%2C_Mutiara_Indah_di_Timur_Indonesia.jpg" alt="Papua" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=400&q=80" alt="Papua" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Papua Province</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -194,42 +211,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `
             },
-            "ntt": {
-                name: "Nusa Tenggara Timur (NTT)",
-                coords: [-8.6500, 121.0833],
-                zoom: 7,
-                infoId: `
-                    <div class="p-2 min-w-[220px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Padar_Island_in_Komodo_National_Park.jpg/800px-Padar_Island_in_Komodo_National_Park.jpg" alt="NTT" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
-                        <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi NTT</h3>
-                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
-                        <ul class="text-sm space-y-2 text-gray-700">
-                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Gizi (Stunting):</b> Tertinggi di Indonesia (35,3%).</li>
-                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Air & Sanitasi:</b> Rawan krisis air bersih, terutama saat kemarau.</li>
-                            <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Disabilitas:</b> Sangat minim fasilitas publik yang ramah disabilitas.</li>
-                        </ul>
-                    </div>
-                `,
-                infoEn: `
-                    <div class="p-2 min-w-[220px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Padar_Island_in_Komodo_National_Park.jpg/800px-Padar_Island_in_Komodo_National_Park.jpg" alt="NTT" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
-                        <h3 class="font-bold text-lg mb-1 text-primary-900">NTT Province</h3>
-                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
-                        <ul class="text-sm space-y-2 text-gray-700">
-                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Nutrition (Stunting):</b> Highest in Indonesia (35.3%).</li>
-                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Water & Sanitation:</b> Prone to clean water crises, especially in dry seasons.</li>
-                            <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Disability:</b> Very minimal disability-friendly public facilities.</li>
-                        </ul>
-                    </div>
-                `
-            },
             "ntb": {
                 name: "Nusa Tenggara Barat (NTB)",
                 coords: [-8.6529, 117.3616],
                 zoom: 7,
                 infoId: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mount_Rinjani_from_Sembalun_Lawang.jpg/800px-Mount_Rinjani_from_Sembalun_Lawang.jpg" alt="NTB" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=400&q=80" alt="NTB" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi NTB</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -241,13 +229,129 @@ document.addEventListener('DOMContentLoaded', () => {
                 `,
                 infoEn: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mount_Rinjani_from_Sembalun_Lawang.jpg/800px-Mount_Rinjani_from_Sembalun_Lawang.jpg" alt="NTB" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=400&q=80" alt="NTB" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">NTB Province</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
                             <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Nutrition (Stunting):</b> Still relatively high at 32.7%.</li>
                             <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Water & Sanitation:</b> Needs improved communal sanitation in remote areas.</li>
                             <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Disability:</b> Focus on empowering vulnerable groups.</li>
+                        </ul>
+                    </div>
+                `
+            },
+            "ntt": {
+                name: "Nusa Tenggara Timur (NTT)",
+                coords: [-8.6500, 121.0833],
+                zoom: 7,
+                infoId: `
+                    <div class="p-2 min-w-[220px]">
+                        <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=400&q=80" alt="NTT" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi NTT</h3>
+                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Gizi (Stunting):</b> Tertinggi di Indonesia (35,3%).</li>
+                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Air & Sanitasi:</b> Rawan krisis air bersih, terutama saat kemarau.</li>
+                            <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Disabilitas:</b> Sangat minim fasilitas publik yang ramah disabilitas.</li>
+                        </ul>
+                    </div>
+                `,
+                infoEn: `
+                    <div class="p-2 min-w-[220px]">
+                        <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=400&q=80" alt="NTT" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <h3 class="font-bold text-lg mb-1 text-primary-900">NTT Province</h3>
+                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Nutrition (Stunting):</b> Highest in Indonesia (35.3%).</li>
+                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Water & Sanitation:</b> Prone to clean water crises, especially in dry seasons.</li>
+                            <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Disability:</b> Very minimal disability-friendly public facilities.</li>
+                        </ul>
+                    </div>
+                `
+            },
+            "sulawesi": {
+                name: "Sulawesi",
+                coords: [-4.8500, 119.6500],
+                zoom: 7,
+                infoId: `
+                    <div class="p-2 min-w-[220px]">
+                        <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=400&q=80" alt="Sulawesi" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <h3 class="font-bold text-lg mb-1 text-primary-900">Wilayah Sulawesi</h3>
+                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Gizi (Stunting):</b> Pendampingan gizi intensif balita dan ibu hamil di kawasan pesisir.</li>
+                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Air & Sanitasi:</b> Pembangunan sumur bor air tawar & fasilitas sanitasi komunal.</li>
+                            <li><i class="fas fa-home text-primary-600 w-4"></i> <b>Sekretariat:</b> Simpul koordinasi di Pangkep, Maros, dan Gowa.</li>
+                        </ul>
+                    </div>
+                `,
+                infoEn: `
+                    <div class="p-2 min-w-[220px]">
+                        <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=400&q=80" alt="Sulawesi" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <h3 class="font-bold text-lg mb-1 text-primary-900">Sulawesi Region</h3>
+                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Nutrition (Stunting):</b> Intensive nutrition counseling for toddlers and pregnant mothers.</li>
+                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Water & Sanitation:</b> Construction of fresh water wells & communal sanitation.</li>
+                            <li><i class="fas fa-home text-primary-600 w-4"></i> <b>Secretariat:</b> Coordination hubs in Pangkep, Maros, and Gowa.</li>
+                        </ul>
+                    </div>
+                `
+            },
+            "bali": {
+                name: "Bali",
+                coords: [-8.4095, 115.1889],
+                zoom: 9,
+                infoId: `
+                    <div class="p-2 min-w-[220px]">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&q=80" alt="Bali" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi Bali</h3>
+                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Inklusi Disabilitas:</b> Pemberdayaan kemandirian ekonomi & penyediaan alat bantu aksesibilitas.</li>
+                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Air & Sanitasi:</b> Edukasi sanitasi ramah lingkungan dan pelestarian sumber air bersih.</li>
+                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Gizi Keluarga:</b> Intervensi pangan bernutrisi bagi kelompok marginal.</li>
+                        </ul>
+                    </div>
+                `,
+                infoEn: `
+                    <div class="p-2 min-w-[220px]">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&q=80" alt="Bali" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <h3 class="font-bold text-lg mb-1 text-primary-900">Bali Province</h3>
+                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Disability Inclusion:</b> Economic empowerment & accessibility aid distribution.</li>
+                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Water & Sanitation:</b> Eco-friendly sanitation education & watershed conservation.</li>
+                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Family Nutrition:</b> Nutritious food support for marginalized communities.</li>
+                        </ul>
+                    </div>
+                `
+            },
+            "maluku": {
+                name: "Maluku",
+                coords: [-3.6547, 128.1906],
+                zoom: 7,
+                infoId: `
+                    <div class="p-2 min-w-[220px]">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Maluku" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <h3 class="font-bold text-lg mb-1 text-primary-900">Kepulauan Maluku</h3>
+                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Air Bersih Kepulauan:</b> Instalasi filtrasi air tawar bagi desa pulau terpencil.</li>
+                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Gizi (Stunting):</b> Penyaluran makanan tambahan untuk menekan angka stunting (26,1%).</li>
+                            <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Disabilitas:</b> Dukungan alat mobilitas bagi warga disabilitas di pulau terluar.</li>
+                        </ul>
+                    </div>
+                `,
+                infoEn: `
+                    <div class="p-2 min-w-[220px]">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Maluku" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <h3 class="font-bold text-lg mb-1 text-primary-900">Maluku Islands</h3>
+                        <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
+                        <ul class="text-sm space-y-2 text-gray-700">
+                            <li><i class="fas fa-hand-holding-water text-primary-600 w-4"></i> <b>Island Clean Water:</b> Fresh water filtration installations for remote island villages.</li>
+                            <li><i class="fas fa-seedling text-primary-600 w-4"></i> <b>Nutrition (Stunting):</b> Supplementary food distribution to address stunting (26.1%).</li>
+                            <li><i class="fas fa-wheelchair text-primary-600 w-4"></i> <b>Disability:</b> Mobility aid support for people with disabilities on outer islands.</li>
                         </ul>
                     </div>
                 `
@@ -268,6 +372,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             activeRegionKey = regionKey;
             
+            // Prevent background scrolling when modal is open
+            document.body.classList.add('overflow-hidden');
+
             // Show modal
             mapModal.classList.remove('hidden');
             mapModal.classList.add('flex');
@@ -309,6 +416,9 @@ document.addEventListener('DOMContentLoaded', () => {
             mapModal.classList.add('hidden');
             mapModal.classList.remove('flex');
             activeRegionKey = null;
+
+            // Restore background scrolling when modal is closed
+            document.body.classList.remove('overflow-hidden');
         }
 
         closeMapModal.addEventListener('click', closeModal);
@@ -316,6 +426,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close when clicking outside modal content
         mapModal.addEventListener('click', (e) => {
             if (e.target === mapModal) {
+                closeModal();
+            }
+        });
+
+        // Close when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mapModal.classList.contains('hidden')) {
                 closeModal();
             }
         });
@@ -328,5 +445,77 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentMarker.openPopup();
             }
         };
+    }
+
+    // ==========================================
+    // Scroll Reveal Animations
+    // ==========================================
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && reveals.length > 0) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        reveals.forEach(el => revealObserver.observe(el));
+    } else {
+        reveals.forEach(el => el.classList.add('active'));
+    }
+
+    // ==========================================
+    // Back to Top Button
+    // ==========================================
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        }, { passive: true });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ==========================================
+    // Active Navigation Scrollspy
+    // ==========================================
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const navLinks = document.querySelectorAll('#navbar nav a[href^="#"]');
+
+    if (sections.length > 0 && navLinks.length > 0) {
+        window.addEventListener('scroll', () => {
+            let currentSectionId = '';
+            const scrollPosition = window.scrollY + 140;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').replace('#', '');
+                if (href === currentSectionId) {
+                    link.classList.add('text-primary-600', 'font-semibold');
+                    link.classList.remove('text-gray-600');
+                } else {
+                    link.classList.remove('text-primary-600', 'font-semibold');
+                    link.classList.add('text-gray-600');
+                }
+            });
+        }, { passive: true });
     }
 });
