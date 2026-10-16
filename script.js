@@ -75,7 +75,7 @@ const translations = {
     "contact_hq_desc": { id: "Jl. Contoh Alamat No. 123<br>Banda Aceh, Indonesia", en: "123 Example Address St<br>Banda Aceh, Indonesia" },
     "contact_email": { id: "Email Kami", en: "Our Email" },
     "contact_phone": { id: "Telepon / WhatsApp", en: "Phone / WhatsApp" },
-    "footer_initiative": { id: "Sebuah Inisiatif dari Natural Aceh Corp", en: "An Initiative of Natural Aceh Corp" },
+    "footer_initiative": { id: "Sebuah Inisiatif dari Perempuan Muda Indonesia", en: "An Initiative of Perempuan Muda Indonesia" },
     "footer_desc": { id: "Hadir untuk menyambung asa dan memastikan hak-hak dasar masyarakat di pelosok negeri terpenuhi.", en: "Present to weave hope and ensure the basic rights of communities in remote areas of the country are fulfilled." },
     "footer_links": { id: "Navigasi", en: "Navigation" },
     "footer_contact_title": { id: "Kontak & Sekretariat", en: "Contact & Secretariat" },
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: 6,
                 infoId: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=400&q=80" alt="Papua" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_papua.jpg" alt="Anak-anak Papua" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi Papua</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `,
                 infoEn: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=400&q=80" alt="Papua" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_papua.jpg" alt="Children of Papua" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Papua Province</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: 7,
                 infoId: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=400&q=80" alt="NTB" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_ntb.jpg" alt="Anak-anak NTB" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi NTB</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `,
                 infoEn: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=400&q=80" alt="NTB" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_ntb.jpg" alt="Children of NTB" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">NTB Province</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: 7,
                 infoId: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=400&q=80" alt="NTT" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_ntt.jpg" alt="Anak-anak NTT" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi NTT</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `,
                 infoEn: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=400&q=80" alt="NTT" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_ntt.jpg" alt="Children of NTT" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">NTT Province</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: 7,
                 infoId: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=400&q=80" alt="Sulawesi" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_sulawesi.jpg" alt="Anak-anak Sulawesi" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Wilayah Sulawesi</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `,
                 infoEn: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=400&q=80" alt="Sulawesi" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_sulawesi.jpg" alt="Children of Sulawesi" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Sulawesi Region</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: 9,
                 infoId: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&q=80" alt="Bali" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_bali.jpg" alt="Anak-anak Bali" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Provinsi Bali</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `,
                 infoEn: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&q=80" alt="Bali" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_bali.jpg" alt="Children of Bali" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Bali Province</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: 7,
                 infoId: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Maluku" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_maluku.jpg" alt="Anak-anak Maluku" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Kepulauan Maluku</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Sumber: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `,
                 infoEn: `
                     <div class="p-2 min-w-[220px]">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Maluku" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
+                        <img src="wilayah_maluku.jpg" alt="Children of Maluku" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block;">
                         <h3 class="font-bold text-lg mb-1 text-primary-900">Maluku Islands</h3>
                         <p class="text-xs text-gray-500 mb-3 border-b pb-2"><i>Source: BPS & SSGI Kemenkes (2022)</i></p>
                         <ul class="text-sm space-y-2 text-gray-700">
