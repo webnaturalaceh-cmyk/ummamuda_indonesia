@@ -5,6 +5,7 @@ const translations = {
     "nav_program": { id: "Program", en: "Programs" },
     "nav_wilayah": { id: "Fokus Wilayah", en: "Focus Areas" },
     "nav_galeri": { id: "Galeri", en: "Gallery" },
+    "nav_mitra": { id: "Mitra", en: "Partners" },
     "nav_kontak": { id: "Kontak", en: "Contact" },
     "nav_cta": { id: "Kontak Kami", en: "Contact Us" },
     "stat_regions_label": { id: "Wilayah Fokus", en: "Focus Regions" },
@@ -18,6 +19,7 @@ const translations = {
     "hero_desc": { id: "Berkomitmen menghadirkan akses dasar air bersih, sanitasi yang layak, intervensi gizi terpadu, dan perlindungan inklusif bagi saudara kita di wilayah 3T.", en: "Committed to providing basic access to clean water, proper sanitation, integrated nutrition interventions, and inclusive protection for our brothers and sisters in 3T regions." },
     "hero_btn1": { id: "Lihat Dokumentasi", en: "View Documentation" },
     "hero_btn2": { id: "Lihat Program", en: "View Programs" },
+    "pillar_badge": { id: "Pilar Intervensi", en: "Intervention Pillars" },
     "pillar_title": { id: "4 Pilar Program Utama", en: "4 Main Program Pillars" },
     "pillar_desc": { id: "Inisiatif kami berfokus pada pendekatan holistik untuk menyelesaikan akar permasalahan di daerah sasaran melalui aksi nyata.", en: "Our initiatives focus on a holistic approach to solving root problems in target areas through real action." },
     "pillar1_title": { id: "Air Bersih", en: "Clean Water" },
@@ -28,20 +30,29 @@ const translations = {
     "pillar3_desc": { id: "Pemberian intervensi gizi terpadu, pemantauan kesehatan ibu dan anak, serta program konkret pencegahan stunting secara komprehensif.", en: "Provision of integrated nutrition interventions, maternal and child health monitoring, and comprehensive concrete stunting prevention programs." },
     "pillar4_title": { id: "Inklusi Disabilitas", en: "Disability Inclusion" },
     "pillar4_desc": { id: "Mendorong pemberdayaan ekonomi, penyediaan alat bantu aksesibilitas, serta advokasi hak-hak dasar bagi penyandang disabilitas di daerah terpencil.", en: "Encouraging economic empowerment, providing accessibility aids, and advocating for the basic rights of people with disabilities in remote areas." },
+    "focus_badge": { id: "Jangkauan Intervensi", en: "Intervention Reach" },
     "focus_title": { id: "Wilayah Intervensi Fokus", en: "Focus Intervention Areas" },
     "focus_desc": { id: "Mendedikasikan sumber daya pada titik-titik krusial di Indonesia Timur yang sangat membutuhkan akselerasi pembangunan dasar.", en: "Dedicating resources to crucial points in Eastern Indonesia that desperately need acceleration of basic development." },
+    "focus1_tag": { id: "Titik Perintis", en: "Pioneer Hub" },
     "focus1_title": { id: "Papua", en: "Papua" },
     "focus1_desc": { id: "Titik mula pergerakan kami. Memfokuskan pada pembangunan sanitasi perintis dan penyediaan akses air di wilayah pedalaman.", en: "The starting point of our movement. Focusing on pioneer sanitation development and water access provision in remote areas." },
+    "focus2_tag": { id: "Intervensi Gizi", en: "Nutrition Intervention" },
     "focus2_title": { id: "Nusa Tenggara Barat (NTB)", en: "West Nusa Tenggara (NTB)" },
     "focus2_desc": { id: "Intervensi difokuskan pada penanganan gizi spesifik, penyediaan air bersih di daerah krisis air, dan penguatan kelompok rentan.", en: "Interventions are focused on specific nutrition handling, clean water provision in water crisis areas, and strengthening vulnerable groups." },
+    "focus3_tag": { id: "Sanitasi Komunal", en: "Communal Sanitation" },
     "focus3_title": { id: "Nusa Tenggara Timur (NTT)", en: "East Nusa Tenggara (NTT)" },
     "focus3_desc": { id: "Mengatasi tingginya angka stunting melalui kolaborasi lintas sektor serta pemenuhan infrastruktur sanitasi komunal yang adaptif.", en: "Overcoming the high rate of stunting through cross-sector collaboration and the fulfillment of adaptive communal sanitation infrastructure." },
+    "focus4_tag": { id: "Infrastruktur Pesisir", en: "Coastal Infrastructure" },
     "focus4_title": { id: "Sulawesi", en: "Sulawesi" },
     "focus4_desc": { id: "Penguatan infrastruktur air bersih pesisir, penanganan stunting terpadu, dan pemberdayaan inklusif di wilayah Sulawesi Selatan dan sekitarnya.", en: "Strengthening coastal clean water infrastructure, integrated stunting intervention, and inclusive empowerment in South Sulawesi and surrounding areas." },
+    "focus5_tag": { id: "Inklusi Berbasis Komunitas", en: "Community-Based Inclusion" },
     "focus5_title": { id: "Bali", en: "Bali" },
     "focus5_desc": { id: "Fokus pada pemberdayaan disabilitas berbasis komunitas, sanitasi ramah lingkungan, serta dukungan ketahanan pangan bagi keluarga rentan.", en: "Focusing on community-based disability empowerment, eco-friendly sanitation, and food security support for vulnerable families." },
+    "focus6_tag": { id: "Filtrasi Kepulauan", en: "Island Water Filtration" },
     "focus6_title": { id: "Maluku", en: "Maluku" },
     "focus6_desc": { id: "Menjangkau pulau-pulau terpencil dengan penyediaan sistem filtrasi air bersih, penanganan stunting kepulauan, dan aksesibilitas dasar.", en: "Reaching remote outer islands with clean water filtration systems, island stunting interventions, and basic accessibility." },
+    "modal_map_title": { id: "Peta Lokasi Intervensi", en: "Intervention Location Map" },
+    "mitra_badge": { id: "Dukungan Lintas Sektor", en: "Cross-Sector Support" },
     "mitra_title": { id: "Mitra & Pendukung", en: "Partners & Supporters" },
     "mitra_desc": { id: "Kolaborasi strategis demi mewujudkan pembangunan inklusif dan berkelanjutan di Indonesia.", en: "Strategic collaboration to realize inclusive and sustainable development in Indonesia." },
     "mitra_hosted": { id: "Hosted by", en: "Hosted by" },
@@ -88,32 +99,77 @@ const translations = {
     "footer_copyright": { id: "&copy; 2024 Umma Muda Indonesia Hak Cipta Dilindungi.", en: "&copy; 2024 Umma Muda Indonesia. All Rights Reserved." }
 };
 
+// Persistent language state via localStorage
+const STORAGE_KEY = 'selectedLang';
 let currentLang = 'id';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtns = document.querySelectorAll('.lang-toggle-btn');
-    
-    toggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            currentLang = currentLang === 'id' ? 'en' : 'id';
-            
-            // Update button texts
-            toggleBtns.forEach(b => {
-                b.innerHTML = currentLang === 'id' ? 'ID' : 'EN';
-            });
-            
-            // Translate elements
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[key]) {
-                    el.innerHTML = translations[key][currentLang];
-                }
-            });
+// Read saved preference from localStorage if available
+try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'en' || saved === 'id') {
+        currentLang = saved;
+    }
+} catch (e) {
+    console.warn('localStorage not accessible', e);
+}
 
-            // Update map popups if map exists
-            if (window.updateMapLanguage) {
-                window.updateMapLanguage(currentLang);
-            }
+/**
+ * Updates UI translations, html lang attribute, and switcher button labels
+ */
+function applyLanguage(lang) {
+    currentLang = lang;
+
+    // 1. Update <html lang="...">
+    document.documentElement.setAttribute('lang', lang);
+
+    // 2. Update button labels while preserving the globe icon
+    document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+        const codeSpan = btn.querySelector('.lang-code');
+        if (codeSpan) {
+            codeSpan.textContent = lang.toUpperCase();
+        } else {
+            btn.innerHTML = `<i class="fas fa-globe text-[#D91B5C] text-sm"></i><span class="lang-code text-gray-800 font-bold text-xs tracking-wider">${lang.toUpperCase()}</span>`;
+        }
+        btn.setAttribute('aria-label', lang === 'id' ? 'Pilih Bahasa (Saat ini: Bahasa Indonesia)' : 'Change Language (Current: English)');
+    });
+
+    // 3. Update all [data-i18n] text
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[key] && translations[key][lang] !== undefined) {
+            el.innerHTML = translations[key][lang];
+        }
+    });
+
+    // 4. Update map popup language if Leaflet map is initialized
+    if (typeof window.updateMapLanguage === 'function') {
+        window.updateMapLanguage(lang);
+    }
+}
+
+/**
+ * Toggles language between 'id' and 'en' and persists selection
+ */
+function toggleLanguage() {
+    const nextLang = currentLang === 'id' ? 'en' : 'id';
+    try {
+        localStorage.setItem(STORAGE_KEY, nextLang);
+    } catch (e) {
+        console.warn('Could not save language preference', e);
+    }
+    applyLanguage(nextLang);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Apply initial language (either saved from localStorage or default 'id')
+    applyLanguage(currentLang);
+
+    // Attach click listeners to language toggle buttons
+    const toggleBtns = document.querySelectorAll('.lang-toggle-btn');
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleLanguage();
         });
     });
 
