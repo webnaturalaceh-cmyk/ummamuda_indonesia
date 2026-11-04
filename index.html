@@ -77,29 +77,32 @@
                 </div>
                 
                 <!-- Desktop Nav -->
-                <nav class="hidden md:flex space-x-7 items-center">
+                <nav class="hidden md:flex space-x-6 lg:space-x-7 items-center">
                     <a href="#beranda" class="text-gray-600 hover:text-primary-600 font-medium transition py-2 text-sm" data-i18n="nav_beranda">Beranda</a>
                     <a href="#program" class="text-gray-600 hover:text-primary-600 font-medium transition py-2 text-sm" data-i18n="nav_program">Program</a>
                     <a href="#wilayah" class="text-gray-600 hover:text-primary-600 font-medium transition py-2 text-sm" data-i18n="nav_wilayah">Fokus Wilayah</a>
                     <a href="#galeri" class="text-gray-600 hover:text-primary-600 font-medium transition py-2 text-sm" data-i18n="nav_galeri">Galeri</a>
+                    <a href="#mitra" class="text-gray-600 hover:text-primary-600 font-medium transition py-2 text-sm" data-i18n="nav_mitra">Mitra</a>
                     <a href="#kontak" class="text-gray-600 hover:text-primary-600 font-medium transition py-2 text-sm" data-i18n="nav_kontak">Kontak</a>
-                    
-                    <button class="lang-toggle-btn text-xs font-bold text-gray-700 hover:text-primary-600 focus:outline-none hover:scale-105 transition ml-2 border border-gray-200 hover:border-primary-300 rounded-full px-3.5 py-1.5 flex items-center gap-1.5 bg-gray-50/80 hover:bg-white shadow-sm" title="Translate language">
-                        <i class="fas fa-globe text-primary-600 text-xs"></i>
-                        <span>ID</span>
-                    </button>
 
+                    <!-- CTA Button -->
                     <a href="#kontak" class="bg-gradient-to-r from-primary-600 to-pink-600 hover:from-primary-700 hover:to-pink-700 text-white font-medium px-5 py-2 rounded-full text-xs shadow-sm hover:shadow-md transition duration-300 transform hover:-translate-y-0.5 inline-flex items-center gap-1.5">
                         <span data-i18n="nav_cta">Kontak Kami</span>
                         <i class="fas fa-arrow-right text-[10px]"></i>
                     </a>
+
+                    <!-- Language Switcher (Paling Kanan) -->
+                    <button type="button" class="lang-toggle-btn lang-switcher-btn inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-200/90 shadow-xs hover:border-[#D91B5C]/50 hover:bg-pink-50/30 hover:shadow-sm hover:scale-105 active:scale-95 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D91B5C] focus-visible:ring-offset-2 cursor-pointer" aria-label="Pilih Bahasa / Change Language" title="Pilih Bahasa / Change Language">
+                        <i class="fas fa-globe text-[#D91B5C] text-sm"></i>
+                        <span class="lang-code text-gray-800 font-bold text-xs tracking-wider">ID</span>
+                    </button>
                 </nav>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-3">
-                    <button class="lang-toggle-btn text-xs font-bold text-gray-700 hover:text-primary-600 focus:outline-none border border-gray-200 rounded-full px-3 py-1 flex items-center gap-1 bg-gray-50 shadow-sm" title="Translate language">
-                        <i class="fas fa-globe text-primary-600 text-xs"></i>
-                        <span>ID</span>
+                <!-- Mobile menu button & Mobile Language Switcher -->
+                <div class="md:hidden flex items-center gap-2.5">
+                    <button type="button" class="lang-toggle-btn lang-switcher-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-200/90 shadow-xs hover:border-[#D91B5C]/50 hover:bg-pink-50/30 active:scale-95 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D91B5C] focus-visible:ring-offset-2 cursor-pointer" aria-label="Pilih Bahasa / Change Language" title="Pilih Bahasa / Change Language">
+                        <i class="fas fa-globe text-[#D91B5C] text-xs"></i>
+                        <span class="lang-code text-gray-800 font-bold text-[11px] tracking-wider">ID</span>
                     </button>
                     <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary-800 focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Toggle Menu">
                         <i class="fas fa-bars text-xl"></i>
@@ -115,6 +118,7 @@
                 <a href="#program" class="mobile-link block px-3.5 py-2.5 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition" data-i18n="nav_program">Program</a>
                 <a href="#wilayah" class="mobile-link block px-3.5 py-2.5 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition" data-i18n="nav_wilayah">Fokus Wilayah</a>
                 <a href="#galeri" class="mobile-link block px-3.5 py-2.5 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition" data-i18n="nav_galeri">Galeri</a>
+                <a href="#mitra" class="mobile-link block px-3.5 py-2.5 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition" data-i18n="nav_mitra">Mitra</a>
                 <a href="#kontak" class="mobile-link block px-3.5 py-2.5 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition" data-i18n="nav_kontak">Kontak</a>
             </div>
         </div>
@@ -213,7 +217,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 reveal">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-50 border border-pink-200 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-3">
-                        <i class="fas fa-seedling text-accent-500"></i> Pilar Intervensi
+                        <i class="fas fa-seedling text-accent-500"></i> <span data-i18n="pillar_badge">Pilar Intervensi</span>
                     </div>
                     <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary-900 mb-4" data-i18n="pillar_title">4 Pilar Program Utama</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-500 mx-auto rounded"></div>
@@ -287,7 +291,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-16 reveal">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-accent-300 text-xs font-semibold uppercase tracking-wider mb-3">
-                        <i class="fas fa-compass"></i> Jangkauan Intervensi
+                        <i class="fas fa-compass"></i> <span data-i18n="focus_badge">Jangkauan Intervensi</span>
                     </div>
                     <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4" data-i18n="focus_title">Wilayah Intervensi Fokus</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-amber-300 mx-auto rounded"></div>
@@ -303,7 +307,7 @@
                             <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md w-9 h-9 rounded-full flex items-center justify-center text-white shadow">
                                 <i class="fas fa-map-marked-alt text-sm"></i>
                             </div>
-                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10">Titik Perintis</span>
+                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10" data-i18n="focus1_tag">Titik Perintis</span>
                             <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white group-hover:text-accent-300 transition" data-i18n="focus1_title">Papua</h3>
                         </div>
                         <div class="p-6">
@@ -323,7 +327,7 @@
                             <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md w-9 h-9 rounded-full flex items-center justify-center text-white shadow">
                                 <i class="fas fa-map-marked-alt text-sm"></i>
                             </div>
-                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10">Intervensi Gizi</span>
+                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10" data-i18n="focus2_tag">Intervensi Gizi</span>
                             <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white group-hover:text-accent-300 transition" data-i18n="focus2_title">Nusa Tenggara Barat (NTB)</h3>
                         </div>
                         <div class="p-6">
@@ -343,7 +347,7 @@
                             <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md w-9 h-9 rounded-full flex items-center justify-center text-white shadow">
                                 <i class="fas fa-map-marked-alt text-sm"></i>
                             </div>
-                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10">Sanitasi Komunal</span>
+                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10" data-i18n="focus3_tag">Sanitasi Komunal</span>
                             <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white group-hover:text-accent-300 transition" data-i18n="focus3_title">Nusa Tenggara Timur (NTT)</h3>
                         </div>
                         <div class="p-6">
@@ -363,7 +367,7 @@
                             <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md w-9 h-9 rounded-full flex items-center justify-center text-white shadow">
                                 <i class="fas fa-map-marked-alt text-sm"></i>
                             </div>
-                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10">Infrastruktur Pesisir</span>
+                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10" data-i18n="focus4_tag">Infrastruktur Pesisir</span>
                             <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white group-hover:text-accent-300 transition" data-i18n="focus4_title">Sulawesi</h3>
                         </div>
                         <div class="p-6">
@@ -383,7 +387,7 @@
                             <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md w-9 h-9 rounded-full flex items-center justify-center text-white shadow">
                                 <i class="fas fa-map-marked-alt text-sm"></i>
                             </div>
-                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10">Inklusi Berbasis Komunitas</span>
+                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10" data-i18n="focus5_tag">Inklusi Berbasis Komunitas</span>
                             <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white group-hover:text-accent-300 transition" data-i18n="focus5_title">Bali</h3>
                         </div>
                         <div class="p-6">
@@ -403,7 +407,7 @@
                             <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md w-9 h-9 rounded-full flex items-center justify-center text-white shadow">
                                 <i class="fas fa-map-marked-alt text-sm"></i>
                             </div>
-                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10">Filtrasi Kepulauan</span>
+                            <span class="absolute top-4 left-4 bg-primary-950/70 backdrop-blur-md text-accent-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/10" data-i18n="focus6_tag">Filtrasi Kepulauan</span>
                             <h3 class="absolute bottom-4 left-6 text-2xl font-bold font-serif text-white group-hover:text-accent-300 transition" data-i18n="focus6_title">Maluku</h3>
                         </div>
                         <div class="p-6">
@@ -425,7 +429,7 @@
                 <div class="flex justify-between items-center px-6 py-4 border-b border-gray-100 bg-gray-50/80">
                     <div class="flex items-center gap-2">
                         <i class="fas fa-map-marked-alt text-primary-600"></i>
-                        <h3 class="text-lg sm:text-xl font-bold text-primary-900 font-serif" id="map-modal-title">Peta Lokasi Intervensi</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-primary-900 font-serif" id="map-modal-title" data-i18n="modal_map_title">Peta Lokasi Intervensi</h3>
                     </div>
                     <button id="close-map-modal" class="text-gray-400 hover:text-red-500 transition focus:outline-none p-2 rounded-full hover:bg-gray-200/80" aria-label="Tutup Modal">
                         <i class="fas fa-times text-lg"></i>
@@ -605,7 +609,7 @@
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-14 reveal">
-                    <span class="text-primary-800 font-bold uppercase tracking-widest text-xs mb-2 block">Dukungan Lintas Sektor</span>
+                    <span class="text-primary-800 font-bold uppercase tracking-widest text-xs mb-2 block" data-i18n="mitra_badge">Dukungan Lintas Sektor</span>
                     <h2 class="text-3xl md:text-5xl font-serif font-bold text-primary-950 mb-3" data-i18n="mitra_title">Mitra & Pendukung</h2>
                     <div class="w-20 h-1 bg-gradient-to-r from-primary-800 to-accent-500 mx-auto rounded-full mb-4"></div>
                     <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed" data-i18n="mitra_desc">Kolaborasi strategis demi mewujudkan pembangunan inklusif dan berkelanjutan di Indonesia.</p>
@@ -613,25 +617,27 @@
 
                 <div class="flex justify-center reveal delay-100">
                     <!-- Strategic Partners Card -->
-                    <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl shadow-gray-200/60 hover:shadow-2xl hover:shadow-pink-900/5 transition-all duration-300 transform hover:-translate-y-1 max-w-4xl w-full mx-4 border border-gray-100 hover:border-pink-200/80 flex flex-col items-center justify-center text-center">
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl shadow-gray-200/60 hover:shadow-2xl hover:shadow-pink-900/5 transition-all duration-300 transform hover:-translate-y-1 max-w-5xl w-full mx-4 border border-gray-100 hover:border-pink-200/80 flex flex-col items-center justify-center text-center">
                         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 text-primary-900 text-xs font-bold uppercase tracking-wider mb-8 shadow-xs">
                             <i class="fas fa-handshake text-accent-600"></i>
                             <span data-i18n="mitra_strategic">Strategic / Program Partner</span>
                         </div>
-                        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-10 w-full">
+                        <div class="grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-4 sm:gap-6 md:gap-8 w-full">
                             <!-- Nathan's Foundation -->
-                            <div class="p-4 sm:p-5 rounded-2xl bg-gray-50/70 hover:bg-pink-50/30 border border-gray-100 hover:border-pink-200 transition duration-300 flex items-center justify-center h-24 sm:h-28 w-full sm:w-auto sm:flex-1">
-                                <img src="logo_nathansfoundation.png" alt="Nathan's Foundation" class="h-14 sm:h-16 md:h-20 w-auto object-contain hover:scale-105 transition duration-300">
+                            <div class="p-4 sm:p-5 rounded-2xl bg-gray-50/70 hover:bg-pink-50/30 border border-gray-100 hover:border-pink-200 transition duration-300 flex items-center justify-center h-24 sm:h-28 w-full">
+                                <img src="logo_nathansfoundation.png" alt="Nathan's Foundation" class="h-12 sm:h-14 md:h-16 max-w-full w-auto object-contain hover:scale-105 transition duration-300">
                             </div>
-                            <div class="hidden sm:block w-px h-16 bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
                             <!-- Australian Government -->
-                            <div class="p-4 sm:p-5 rounded-2xl bg-gray-50/70 hover:bg-pink-50/30 border border-gray-100 hover:border-pink-200 transition duration-300 flex items-center justify-center h-24 sm:h-28 w-full sm:w-auto sm:flex-1">
-                                <img src="logo_kedutaan_australian.png" alt="Australian Government" class="h-14 sm:h-16 md:h-20 w-auto object-contain hover:scale-105 transition duration-300">
+                            <div class="p-4 sm:p-5 rounded-2xl bg-gray-50/70 hover:bg-pink-50/30 border border-gray-100 hover:border-pink-200 transition duration-300 flex items-center justify-center h-24 sm:h-28 w-full">
+                                <img src="logo_kedutaan_australian.png" alt="Australian Government" class="h-12 sm:h-14 md:h-16 max-w-full w-auto object-contain hover:scale-105 transition duration-300">
                             </div>
-                            <div class="hidden sm:block w-px h-16 bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
                             <!-- Pemerintah Kabupaten Teluk Bintuni -->
-                            <div class="p-4 sm:p-5 rounded-2xl bg-gray-50/70 hover:bg-pink-50/30 border border-gray-100 hover:border-pink-200 transition duration-300 flex items-center justify-center h-24 sm:h-28 w-full sm:w-auto sm:flex-1">
-                                <img src="logo_kabupaten_teluk_bintuni.png" alt="Pemerintah Kabupaten Teluk Bintuni" class="h-14 sm:h-16 md:h-20 w-auto object-contain hover:scale-105 transition duration-300">
+                            <div class="p-4 sm:p-5 rounded-2xl bg-gray-50/70 hover:bg-pink-50/30 border border-gray-100 hover:border-pink-200 transition duration-300 flex items-center justify-center h-24 sm:h-28 w-full">
+                                <img src="logo_kabupaten_teluk_bintuni.png" alt="Pemerintah Kabupaten Teluk Bintuni" class="h-12 sm:h-14 md:h-16 max-w-full w-auto object-contain hover:scale-105 transition duration-300">
+                            </div>
+                            <!-- Plan International -->
+                            <div class="p-4 sm:p-5 rounded-2xl bg-gray-50/70 hover:bg-pink-50/30 border border-gray-100 hover:border-pink-200 transition duration-300 flex items-center justify-center h-24 sm:h-28 w-full">
+                                <img src="logo_plan.png" alt="Plan International - Sampai semua setara" class="h-12 sm:h-14 md:h-16 max-w-full w-auto object-contain hover:scale-105 transition duration-300">
                             </div>
                         </div>
                     </div>
