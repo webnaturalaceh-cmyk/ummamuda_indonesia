@@ -653,9 +653,9 @@
         <div class="h-1.5 w-full bg-gradient-to-r from-primary-800 via-accent-500 to-primary-700"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
                 <!-- Branding -->
-                <div class="md:col-span-1">
+                <div>
                     <span class="font-bold text-2xl text-white font-serif tracking-wide block mb-1">Umma Muda Indonesia</span>
                     <span class="text-xs text-accent-400 font-medium block mb-4" data-i18n="footer_initiative">Sebuah Inisiatif dari Perempuan Muda Indonesia</span>
                     <p class="text-sm text-gray-400 mb-6 leading-relaxed" data-i18n="footer_desc">
@@ -669,27 +669,28 @@
                 </div>
 
                 <!-- Links -->
-                <div class="md:col-span-1">
+                <div>
                     <h4 class="text-white font-semibold mb-5 uppercase text-xs tracking-wider border-b border-gray-800 pb-2 inline-block" data-i18n="footer_links">Navigasi</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a href="#beranda" class="text-gray-400 hover:text-accent-400 transition flex items-center gap-2" data-i18n="nav_beranda"><i class="fas fa-chevron-right text-[10px] text-gray-600"></i>Beranda</a></li>
                         <li><a href="#program" class="text-gray-400 hover:text-accent-400 transition flex items-center gap-2" data-i18n="nav_program"><i class="fas fa-chevron-right text-[10px] text-gray-600"></i>Program</a></li>
                         <li><a href="#wilayah" class="text-gray-400 hover:text-accent-400 transition flex items-center gap-2" data-i18n="nav_wilayah"><i class="fas fa-chevron-right text-[10px] text-gray-600"></i>Fokus Wilayah</a></li>
                         <li><a href="#galeri" class="text-gray-400 hover:text-accent-400 transition flex items-center gap-2" data-i18n="nav_galeri"><i class="fas fa-chevron-right text-[10px] text-gray-600"></i>Dokumentasi</a></li>
+                        <li><a href="#mitra" class="text-gray-400 hover:text-accent-400 transition flex items-center gap-2" data-i18n="nav_mitra"><i class="fas fa-chevron-right text-[10px] text-gray-600"></i>Mitra</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact Info -->
-                <div class="md:col-span-1">
-                    <h4 class="text-white font-semibold mb-5 uppercase text-xs tracking-wider border-b border-gray-800 pb-2 inline-block" data-i18n="footer_contact_title">Kontak & Sekretariat</h4>
+                <div>
+                    <h4 class="text-white font-semibold mb-5 uppercase text-xs tracking-wider border-b border-gray-800 pb-2 inline-block" data-i18n="footer_contact_title">Kontak</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li class="flex items-start">
                             <div class="w-8 h-8 rounded-lg bg-primary-950 border border-primary-800 flex items-center justify-center mr-3 flex-shrink-0 text-accent-400">
                                 <i class="fas fa-envelope text-xs"></i>
                             </div>
                             <div>
-                                <span class="text-[11px] text-gray-400 uppercase tracking-wider block font-semibold">Email</span>
-                                <a href="mailto:ummamudaindo@gmail.com" class="text-gray-200 hover:text-accent-400 hover:underline transition font-medium">ummamudaindo@gmail.com</a>
+                                <span class="text-[11px] text-gray-400 uppercase tracking-wider block font-semibold" data-i18n="contact_email_label">Email</span>
+                                <a href="mailto:ummamudaindo@gmail.com" class="text-gray-200 hover:text-accent-400 hover:underline transition font-medium text-xs sm:text-sm break-all">ummamudaindo@gmail.com</a>
                             </div>
                         </li>
                         <li class="flex items-start">
@@ -697,21 +698,35 @@
                                 <i class="fas fa-phone-alt text-xs"></i>
                             </div>
                             <div>
-                                <span class="text-[11px] text-gray-400 uppercase tracking-wider block font-semibold">No. HP / WhatsApp</span>
-                                <a href="https://wa.me/6282198950801" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-accent-400 hover:underline transition font-medium inline-flex items-center gap-1.5">
+                                <span class="text-[11px] text-gray-400 uppercase tracking-wider block font-semibold" data-i18n="contact_phone_label">No. HP / WhatsApp</span>
+                                <a href="https://wa.me/6282198950801" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-accent-400 hover:underline transition font-medium inline-flex items-center gap-1.5 text-xs sm:text-sm">
                                     <span>+62 821-9895-0801</span>
                                     <i class="fas fa-external-link-alt text-[10px] opacity-70"></i>
                                 </a>
                             </div>
                         </li>
-                        <li class="flex items-start">
-                            <div class="w-8 h-8 rounded-lg bg-primary-950 border border-primary-800 flex items-center justify-center mr-3 flex-shrink-0 text-accent-400">
-                                <i class="fas fa-map-marker-alt text-xs"></i>
-                            </div>
-                            <div>
-                                <span class="text-[11px] text-gray-400 uppercase tracking-wider block font-semibold" data-i18n="footer_secretariat_label">Daftar Sekretariat</span>
-                                <span class="text-xs text-gray-300 leading-relaxed block" data-i18n="footer_item_loc">Pangkep (Sulsel), Maros (Sulsel), Gowa (Sulsel), Kupang (NTT), dan Teluk Bintuni (Papua Barat).</span>
-                            </div>
+                    </ul>
+                </div>
+
+                <!-- Secretariat Column (Di Samping Kontak) -->
+                <div>
+                    <h4 class="text-white font-semibold mb-5 uppercase text-xs tracking-wider border-b border-gray-800 pb-2 inline-block" data-i18n="footer_secretariat_title">Daftar Sekretariat</h4>
+                    <ul class="space-y-3 text-xs text-gray-300">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-map-marker-alt text-accent-400 mt-0.5 text-[11px] flex-shrink-0"></i>
+                            <span data-i18n="footer_sec_sulsel"><strong class="text-white font-medium">Pangkep, Maros &amp; Gowa</strong> (Sulawesi Selatan)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-map-marker-alt text-accent-400 mt-0.5 text-[11px] flex-shrink-0"></i>
+                            <span data-i18n="footer_sec_ntt"><strong class="text-white font-medium">Kupang</strong> (Nusa Tenggara Timur)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-map-marker-alt text-accent-400 mt-0.5 text-[11px] flex-shrink-0"></i>
+                            <span data-i18n="footer_sec_papua_barat"><strong class="text-white font-medium">Teluk Bintuni &amp; Manokwari</strong> (Papua Barat)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-map-marker-alt text-accent-400 mt-0.5 text-[11px] flex-shrink-0"></i>
+                            <span data-i18n="footer_sec_papua_daya"><strong class="text-white font-medium">Sorong</strong> (Papua Barat Daya)</span>
                         </li>
                     </ul>
                 </div>
